@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es" data-theme="emerald">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>El Tintero Seco</title>
+    <meta
+      name="description"
+      content="Ediciones provinciales. Elige tu provincia y entra."
+    />
+    <link rel="canonical" href="https://eltinteroseco.es/" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Mismos estilos que Soria (temporal). Luego los copias al root. -->
+    <link rel="stylesheet" href="css/output.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <script>
+      // Tema fijo (sin toggle)
+      document.documentElement.setAttribute("data-theme", "emerald");
+    </script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <div id="dream-global-bg"></div>
+
+    <!-- NAV: sin fondo/sombra fija (más parecido a la web real) -->
+    <nav class="sticky top-0 z-30 mt-4 lg:mt-8 py-4">
+      <div class="container flex justify-between px-4">
+        <section class="flex items-center gap-4">
+          <a href="https://eltinteroseco.es/" class="cursor-pointer">
+            <!-- mismo “icono” que usas en Soria, pero sin círculo -->
+            <img
+              src="img/personal/avatar.png"
+              alt="El Tintero Seco"
+              class="h-10 w-10"
+            />
+          </a>
+
+          <div>
+            <a
+              href="https://eltinteroseco.es/"
+              class="text-lg font-semibold cursor-pointer"
+            >
+              El Tintero Seco
+            </a>
+            <div class="text-base-content/60 text-sm">
+              La realidad, pero con resaca
+            </div>
+          </div>
+        </section>
+      </div>
+    </nav>
+
+    <!-- MAIN (empuja el footer abajo) -->
+    <main class="flex-1">
+      <div class="container">
+        <div class="mt-8 lg:mt-12 px-4">
+          <div class="mx-auto prose dark:prose-invert text-center">
+            <h1 class="text-3xl">Ediciones provinciales</h1>
+            <p>Elige tu provincia:</p>
+          </div>
+
+          <!-- CARD centrado -->
+          <div class="mt-8 flex justify-center">
+            <a
+              class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer w-full max-w-md"
+              href="https://soria.eltinteroseco.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Entrar a la edición de Soria"
+            >
+              <div class="card-body">
+                <div class="flex items-center justify-between">
+                  <h2 class="card-title">Soria</h2>
+                  <span class="text-xl opacity-70" aria-hidden="true">↗</span>
+                </div>
+                <p class="opacity-80">
+                  Noticias satíricas y humor local sobre Soria.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER abajo del todo -->
+    <footer class="container px-4 py-12">
+      <div class="text-sm opacity-80">
+        <p>© 2026 El Tintero Seco</p>
+        <p>
+          Medio satírico de actualidad · Contenido inspirado en hechos reales
+          reinterpretados con humor ·
+          <a
+            href="mailto:eltinteroseco@gmail.com"
+            class="cursor-pointer hover:underline"
+            >eltinteroseco@gmail.com</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS del theme (para el fondo/pequeños detalles visuales) -->
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
