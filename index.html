@@ -37,12 +37,27 @@
         height: 100%;
       }
     </style>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX36BWCN2H"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YX36BWCN2H"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
       gtag("config", "G-YX36BWCN2H");
     </script>
@@ -88,57 +103,87 @@
           </div>
 
           <!-- CARD centrado (SIN <a> anidado) -->
-<div class="mt-8 flex justify-center">
-  <div class="card bg-base-100 hover:bg-base-content/10 shadow-xl w-full max-w-md relative">
-    <!-- Overlay clickable para “Entrar” -->
-    <a
-      href="https://soria.eltinteroseco.es/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Entrar a la edición de Soria"
-      class="absolute inset-0 z-0"
-      onclick="gtag && gtag('event','select_edition',{edition:'soria',destination:'https://soria.eltinteroseco.es/'});"
-    ></a>
+          <div class="mt-8 flex justify-center">
+            <div
+              class="card bg-base-100 hover:bg-base-content/10 shadow-xl w-full max-w-md relative"
+            >
+              <!-- Overlay clickable para “Entrar” -->
+              <a
+                href="https://soria.eltinteroseco.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Entrar a la edición de Soria"
+                class="absolute inset-0 z-0"
+                onclick="
+                  gtag &&
+                    gtag('event', 'select_edition', {
+                      edition: 'soria',
+                      destination: 'https://soria.eltinteroseco.es/',
+                    })
+                "
+              ></a>
 
-    <div class="card-body relative z-10">
-      <div class="flex items-center justify-between">
-        <h2 class="card-title">Soria</h2>
-        <span class="text-xl opacity-70" aria-hidden="true">↗</span>
-      </div>
+              <div class="card-body relative z-10">
+                <div class="flex items-center justify-between">
+                  <h2 class="card-title">Soria</h2>
 
-      <p class="opacity-80">Noticias satíricas y humor local sobre Soria.</p>
+                  <!-- Icono "abrir" del theme -->
+                  <ion-icon
+                    name="open-outline"
+                    class="text-xl opacity-70"
+                  ></ion-icon>
+                </div>
 
-      <!-- Links suaves (estos ya NO rompen nada) -->
-      <div class="mt-3 flex flex-wrap gap-3 text-xs opacity-70">
-        <a
-          class="link link-hover"
-          href="https://soria.eltinteroseco.es/posts/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onclick="gtag && gtag('event','open_archive',{edition:'soria'});"
-          >Archivo</a
-        >
-        <a
-          class="link link-hover"
-          href="https://soria.eltinteroseco.es/index.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-          onclick="gtag && gtag('event','open_rss',{edition:'soria'});"
-          >RSS</a
-        >
-        <a
-          class="link link-hover"
-          href="https://soria.eltinteroseco.es/sitemap.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-          onclick="gtag && gtag('event','open_sitemap',{edition:'soria'});"
-          >Sitemap</a
-        >
-      </div>
-    </div>
-  </div>
-</div>
+                <p class="opacity-80">
+                  Noticias satíricas y humor local sobre Soria.
+                </p>
 
+                <!-- Links suaves con iconos del theme -->
+                <div class="mt-3 flex flex-wrap gap-4 text-xs opacity-70">
+                  <a
+                    class="link link-hover inline-flex items-center gap-1"
+                    href="https://soria.eltinteroseco.es/posts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="
+                      gtag &&
+                        gtag('event', 'open_archive', { edition: 'soria' })
+                    "
+                  >
+                    <ion-icon
+                      name="file-tray-outline"
+                      class="text-base"
+                    ></ion-icon>
+                  </a>
+
+                  <a
+                    class="link link-hover inline-flex items-center gap-1"
+                    href="https://soria.eltinteroseco.es/index.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="
+                      gtag && gtag('event', 'open_rss', { edition: 'soria' })
+                    "
+                  >
+                    <ion-icon name="logo-rss" class="text-base"></ion-icon>
+                  </a>
+
+                  <a
+                    class="link link-hover inline-flex items-center gap-1"
+                    href="https://soria.eltinteroseco.es/sitemap.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="
+                      gtag &&
+                        gtag('event', 'open_sitemap', { edition: 'soria' })
+                    "
+                  >
+                    <ion-icon name="map-outline" class="text-base"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -163,4 +208,3 @@
     <script src="js/main.min.js"></script>
   </body>
 </html>
-
