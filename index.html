@@ -87,55 +87,58 @@
             <p>Elige tu provincia:</p>
           </div>
 
-          <!-- CARD centrado -->
-          <div class="mt-8 flex justify-center">
-            <a
-              class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer w-full max-w-md"
-              href="https://soria.eltinteroseco.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Entrar a la edición de Soria"
-              onclick="gtag && gtag('event','select_edition',{edition:'soria',destination:'https://soria.eltinteroseco.es/'});"
-            >
-              <div class="card-body">
-                <div class="flex items-center justify-between">
-                  <h2 class="card-title">Soria</h2>
-                  <span class="text-xl opacity-70" aria-hidden="true">↗</span>
-                </div>
-                <p class="opacity-80">
-                  Noticias satíricas y humor local sobre Soria.
-                </p>
+          <!-- CARD centrado (SIN <a> anidado) -->
+<div class="mt-8 flex justify-center">
+  <div class="card bg-base-100 hover:bg-base-content/10 shadow-xl w-full max-w-md relative">
+    <!-- Overlay clickable para “Entrar” -->
+    <a
+      href="https://soria.eltinteroseco.es/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Entrar a la edición de Soria"
+      class="absolute inset-0 z-0"
+      onclick="gtag && gtag('event','select_edition',{edition:'soria',destination:'https://soria.eltinteroseco.es/'});"
+    ></a>
 
-                <!-- Links suaves (Archivo / RSS / Sitemap) -->
-                <div class="mt-3 flex flex-wrap gap-3 text-xs opacity-70">
-                  <a
-                    class="link link-hover"
-                    href="https://soria.eltinteroseco.es/posts/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onclick="gtag && gtag('event','open_archive',{edition:'soria'});"
-                    >Archivo</a
-                  >
-                  <a
-                    class="link link-hover"
-                    href="https://soria.eltinteroseco.es/index.xml"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onclick="gtag && gtag('event','open_rss',{edition:'soria'});"
-                    >RSS</a
-                  >
-                  <a
-                    class="link link-hover"
-                    href="https://soria.eltinteroseco.es/sitemap.xml"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onclick="gtag && gtag('event','open_sitemap',{edition:'soria'});"
-                    >Sitemap</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
+    <div class="card-body relative z-10">
+      <div class="flex items-center justify-between">
+        <h2 class="card-title">Soria</h2>
+        <span class="text-xl opacity-70" aria-hidden="true">↗</span>
+      </div>
+
+      <p class="opacity-80">Noticias satíricas y humor local sobre Soria.</p>
+
+      <!-- Links suaves (estos ya NO rompen nada) -->
+      <div class="mt-3 flex flex-wrap gap-3 text-xs opacity-70">
+        <a
+          class="link link-hover"
+          href="https://soria.eltinteroseco.es/posts/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="gtag && gtag('event','open_archive',{edition:'soria'});"
+          >Archivo</a
+        >
+        <a
+          class="link link-hover"
+          href="https://soria.eltinteroseco.es/index.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="gtag && gtag('event','open_rss',{edition:'soria'});"
+          >RSS</a
+        >
+        <a
+          class="link link-hover"
+          href="https://soria.eltinteroseco.es/sitemap.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="gtag && gtag('event','open_sitemap',{edition:'soria'});"
+          >Sitemap</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </main>
@@ -160,3 +163,4 @@
     <script src="js/main.min.js"></script>
   </body>
 </html>
+
