@@ -12,7 +12,18 @@
     <link rel="canonical" href="https://eltinteroseco.es/" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <!-- Mismos estilos que Soria (temporal). Luego los copias al root. -->
+    <!-- Open Graph / Twitter -->
+    <meta property="og:url" content="https://eltinteroseco.es/" />
+    <meta property="og:site_name" content="El Tintero Seco" />
+    <meta property="og:title" content="El Tintero Seco" />
+    <meta
+      property="og:description"
+      content="Ediciones provinciales. Elige tu provincia y entra."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Mismos estilos que Soria (ya locales) -->
     <link rel="stylesheet" href="css/output.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -26,6 +37,15 @@
         height: 100%;
       }
     </style>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX36BWCN2H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-YX36BWCN2H");
+    </script>
   </head>
 
   <body class="min-h-screen flex flex-col">
@@ -36,7 +56,6 @@
       <div class="container flex justify-between px-4">
         <section class="flex items-center gap-4">
           <a href="https://eltinteroseco.es/" class="cursor-pointer">
-            <!-- mismo “icono” que usas en Soria, pero sin círculo -->
             <img
               src="img/personal/avatar.png"
               alt="El Tintero Seco"
@@ -76,6 +95,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Entrar a la edición de Soria"
+              onclick="gtag && gtag('event','select_edition',{edition:'soria',destination:'https://soria.eltinteroseco.es/'});"
             >
               <div class="card-body">
                 <div class="flex items-center justify-between">
@@ -85,6 +105,34 @@
                 <p class="opacity-80">
                   Noticias satíricas y humor local sobre Soria.
                 </p>
+
+                <!-- Links suaves (Archivo / RSS / Sitemap) -->
+                <div class="mt-3 flex flex-wrap gap-3 text-xs opacity-70">
+                  <a
+                    class="link link-hover"
+                    href="https://soria.eltinteroseco.es/posts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="gtag && gtag('event','open_archive',{edition:'soria'});"
+                    >Archivo</a
+                  >
+                  <a
+                    class="link link-hover"
+                    href="https://soria.eltinteroseco.es/index.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="gtag && gtag('event','open_rss',{edition:'soria'});"
+                    >RSS</a
+                  >
+                  <a
+                    class="link link-hover"
+                    href="https://soria.eltinteroseco.es/sitemap.xml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="gtag && gtag('event','open_sitemap',{edition:'soria'});"
+                    >Sitemap</a
+                  >
+                </div>
               </div>
             </a>
           </div>
