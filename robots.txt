@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap del dominio raíz
+Sitemap: https://eltinteroseco.es/sitemap.xml
+
+# Sitemap del subdominios
+Sitemap: https://soria.eltinteroseco.es/sitemap.xml
